@@ -8,6 +8,17 @@ b = [[3,6,9],[2,5,8],[1,4,7]]
 $rows = 3
 $cols = 3
 
+def suma(x,y)
+  c = Array.new($cols) {Array.new($rows)}
+  $rows.times do |i|
+      $cols.times do |j|	
+	c[i][j] = x[i][j] + y[i][j] 	 
+      end
+  end
+ return c  
+end
+  
+
 #Procedimiento que imprime una matriz
 def imprimir(matriz)
    $rows.times do |i|
@@ -47,5 +58,10 @@ puts "Matriz A:"
 imprimir a
 puts "Matriz B:"
 imprimir b
+#<<<<<<< HEAD
 puts "Resultado de multiplicar A x B"
 imprimir (multiplicar(a,b))
+#=======
+puts "Resultado de la suma A + B"
+imprimir suma(a,b)
+#>>>>>>> suma
